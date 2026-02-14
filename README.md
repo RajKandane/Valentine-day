@@ -2,14 +2,14 @@
 
 A fun, interactive Valentine's Day page where the "Yes" button grows bigger every time they click "No" — with falling hearts, cute GIFs, music, and playful toast messages. Built with pure HTML, CSS, and JavaScript.
 
-**Live demo:** [sahilgogna.github.io/v-day](https://sahilgogna.github.io/v-day)
+**Live demo:** [https://rajkandane.github.io/Valentine-day](https://rajkandane.github.io/Valentine-day)
 
 
 ---
 
 ## Want to Use This to Impress Your GF/Wife?
 
-You've got three options — pick whatever works for you.
+You've got three options : 
 
 ---
 
@@ -18,7 +18,7 @@ You've got three options — pick whatever works for you.
 No setup needed. Just send this link:
 
 ```
-https://sahilgogna.github.io/v-day
+https://rajkandane.github.io/Valentine-day
 ```
 
 That's it. Done. You're welcome.
@@ -30,7 +30,7 @@ That's it. Done. You're welcome.
 Want your own version you can customize? Follow these steps:
 
 #### 1. Fork the Repo
-- Go to [github.com/SahilGogna/v-day](https://github.com/SahilGogna/v-day)
+- Go to [https://github.com/RajKandane/Valentine-day](https://github.com/RajKandane/Valentine-day)
 - Click the **Fork** button in the top-right corner
 - This creates a copy of the repo under your GitHub account
 
@@ -64,9 +64,9 @@ Want your own version you can customize? Follow these steps:
 
 Want something completely unique? Use AI to build it.
 
-#### 1. Open Antigravity
-- Google **"anti gravity google"** or go to [antigravity.dev](https://www.antigravity.dev)
-- It has **Sonnet 4.6** built right in — no need to go anywhere else
+#### 1. Open ChatGPT
+- Google **"ChatGPT"** or go to [chatgpt.com](https://chatgpt.com/)
+- built right in — no need to go anywhere else
 
 #### 2. Describe What You Want
 - Tell it exactly what you're imagining. Some ideas:
@@ -91,7 +91,7 @@ Want something completely unique? Use AI to build it.
 ## Project Structure
 
 ```
-v-day/
+Valentine-day/
 ├── index.html       # Main page — "Will you be my Valentine?"
 ├── yes.html         # Celebration page after they say Yes
 ├── script.js        # Main page logic (button growth, GIF swaps, toasts)
