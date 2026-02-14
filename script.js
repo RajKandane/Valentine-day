@@ -79,7 +79,7 @@ function handleYesClick() {
         showTeaseMessage(msg)
         return
     }
-    window.location.href = 'yes.html'
+    showYesPage()
 }
 
 function showTeaseMessage(msg) {
@@ -145,3 +145,52 @@ function runAway() {
     noBtn.style.top = `${randomY}px`
     noBtn.style.zIndex = '50'
 }
+
+/* ---------------- YES PAGE WITHOUT RELOAD ---------------- */
+
+function showYesPage() {
+
+    // change title
+    document.title = "Yay! 🎉"
+
+    // replace content
+    document.querySelector(".container").innerHTML = `
+        <h1 class="yes-title">Knew you would say yes! 🎉</h1>
+
+        <div class="gif-container">
+            <img id="cat-gif" src="https://media.tenor.com/eNHbizSfVb0AAAAj/lovemode-cute.gif">
+        </div>
+
+        <p class="yes-message">You just made me the happiest person! 💕</p>
+    `
+
+    launchConfetti()
+}
+
+/* CONFETTI */
+function launchConfetti() {
+    const script = document.createElement('script')
+    script.src = "https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"
+    script.onload = () => {
+
+        const duration = 6000
+        const end = Date.now() + duration
+
+        confetti({
+            particleCount: 150,
+            spread: 100,
+            origin: { x: 0.5, y: 0.3 }
+        })
+
+        const interval = setInterval(() => {
+            if (Date.now() > end) return clearInterval(interval)
+
+            confetti({ particleCount: 40, angle: 60, spread: 55, origin: { x: 0, y: 0.6 } })
+            confetti({ particleCount: 40, angle: 120, spread: 55, origin: { x: 1, y: 0.6 } })
+
+        }, 300)
+    }
+
+    document.body.appendChild(script)
+}
+
