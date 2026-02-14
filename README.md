@@ -51,7 +51,6 @@ Want your own version you can customize? Follow these steps:
 
 #### 4. Personalize It
 - Edit `index.html` to change the question, title, or GIF
-- Edit `yes.html` to change the celebration page
 - Edit `script.js` to tweak the toast messages, button behavior, or GIF changes
 - Edit `style.css` to change colors, fonts, or animations
 - Swap out the music file in the `music/` folder with your own song
@@ -77,7 +76,7 @@ Want something completely unique? Use AI to build it.
   - Whatever your heart desires — literally
 
 #### 3. Get the Code
-- Antigravity will generate the full HTML, CSS, and JavaScript for you
+- ChatGPT will generate the full HTML, CSS, and JavaScript for you
 - Copy the code into files on your computer
 
 #### 4. Deploy It
@@ -92,10 +91,8 @@ Want something completely unique? Use AI to build it.
 
 ```
 Valentine-day/
-├── index.html       # Main page — "Will you be my Valentine?"
-├── yes.html         # Celebration page after they say Yes
+├── index.html       # Main page — "Will you be my Valentine?" and Celebration page after they say Yes
 ├── script.js        # Main page logic (button growth, GIF swaps, toasts)
-├── yes-script.js    # Celebration page animations
 ├── style.css        # All the styling and animations
 └── music/           # Background music
 ```
