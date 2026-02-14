@@ -1,22 +1,45 @@
+/* ---------------- MUSIC ---------------- */
+
 let musicPlaying = false
+const music = document.getElementById("bg-music")
+music.volume = 0.35
+
+// Start music on first click (100% works on all browsers)
+document.addEventListener("click", () => {
+    music.play()
+        .then(() => {
+            musicPlaying = true
+            document.getElementById('music-toggle').textContent = '🔊'
+        })
+        .catch(() => {})
+}, { once: true })
+
+
+function toggleMusic() {
+    if (music.paused) {
+        music.play()
+        musicPlaying = true
+        document.getElementById('music-toggle').textContent = '🔊'
+    } else {
+        music.pause()
+        musicPlaying = false
+        document.getElementById('music-toggle').textContent = '🔇'
+    }
+}
+
+
+/* ---------------- CONFETTI ---------------- */
 
 window.addEventListener('load', () => {
     launchConfetti()
-
-    // Autoplay music (works since user clicked Yes to get here)
-    const music = document.getElementById('bg-music')
-    music.volume = 0.3
-    music.play().catch(() => {})
-    musicPlaying = true
-    document.getElementById('music-toggle').textContent = '🔊'
 })
 
 function launchConfetti() {
-    const colors = ['#ff69b4', '#ff1493', '#ff85a2', '#ffb3c1', '#ff0000', '#ff6347', '#fff', '#ffdf00']
+    const colors = ['#ff69b4','#ff1493','#ff85a2','#ffb3c1','#ff0000','#ff6347','#fff','#ffdf00']
     const duration = 6000
     const end = Date.now() + duration
 
-    // Initial big burst
+    // Big burst
     confetti({
         particleCount: 150,
         spread: 100,
@@ -24,7 +47,7 @@ function launchConfetti() {
         colors
     })
 
-    // Continuous side cannons
+    // Side cannons
     const interval = setInterval(() => {
         if (Date.now() > end) {
             clearInterval(interval)
@@ -47,17 +70,4 @@ function launchConfetti() {
             colors
         })
     }, 300)
-}
-
-function toggleMusic() {
-    const music = document.getElementById('bg-music')
-    if (musicPlaying) {
-        music.pause()
-        musicPlaying = false
-        document.getElementById('music-toggle').textContent = '🔇'
-    } else {
-        music.play()
-        musicPlaying = true
-        document.getElementById('music-toggle').textContent = '🔊'
-    }
 }
